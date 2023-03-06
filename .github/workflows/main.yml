@@ -1,0 +1,148 @@
+name: Update Metrics 📊
+on:
+  schedule:
+    - cron: '0 * * * *'
+  push:
+    branches:
+      - main
+  workflow_dispatch: {}
+jobs:
+  header:
+    name: Generate Header
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@v3.32
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          use_prebuilt_image: true
+          output_action: gist
+          committer_gist: a6fe28fcd123226209c328ecadc56757
+          filename: header.svg
+          config_output: svg
+          output_condition: data-changed
+
+          user: nzbr
+          template: classic
+          optimize: css, xml
+
+          repositories_forks: true
+          config_timezone: Europe/Berlin
+          config_animations: true
+          config_gemoji: true
+
+          base: header
+          base_indepth: true
+
+  left:
+    name: Generate Left Column
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@v3.32
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          use_prebuilt_image: true
+          output_action: gist
+          committer_gist: a6fe28fcd123226209c328ecadc56757
+          filename: left.svg
+          config_output: svg
+          output_condition: data-changed
+
+          user: nzbr
+          template: classic
+          optimize: css, xml
+
+          repositories_forks: true
+          config_timezone: Europe/Berlin
+          config_animations: true
+          config_gemoji: true
+          config_order: base.activity+community, base.repositories, gists, notable
+
+          base: activity, community, repositories
+          base_indepth: true
+
+          plugin_gists: true
+
+          plugin_notable: true
+          plugin_notable_repositories: true
+          plugin_notable_types: commit
+
+  right:
+    name: Generate Right Column
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@v3.32
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          use_prebuilt_image: true
+          output_action: gist
+          committer_gist: a6fe28fcd123226209c328ecadc56757
+          filename: right.svg
+          config_output: svg
+          output_condition: data-changed
+
+          user: nzbr
+          template: classic
+          optimize: css, xml
+
+          repositories_forks: true
+          config_timezone: Europe/Berlin
+          config_animations: true
+          config_gemoji: true
+          config_padding: 0, 8 + 20%
+
+          base: ''
+
+          plugin_languages: true
+          plugin_languages_details: percentage, lines
+          plugin_languages_indepth: true
+          plugin_languages_categories: markup, programming, prose, text
+          plugin_languages_recent_categories: markup, programming, prose, text
+          plugin_languages_sections: most-used, recently-used
+          plugin_languages_limit: 0
+          plugin_languages_threshold: 0.01%
+          plugin_languages_ignored: >-
+            Text,
+            Coq,
+            RenderScript,
+            AGS Script
+          plugin_languages_skipped: >-
+            nzbr/nixpkgs,
+            nzbr/codimd
+
+  footer:
+    name: Generate Footer
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@v3.32
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          use_prebuilt_image: true
+          output_action: gist
+          committer_gist: a6fe28fcd123226209c328ecadc56757
+          filename: footer.svg
+          config_output: svg
+          output_condition: data-changed
+
+          user: nzbr
+          template: classic
+          optimize: css, xml
+
+          repositories_forks: true
+          config_timezone: Europe/Berlin
+          config_animations: true
+          config_gemoji: true
+
+          base: metadata
+          base_indepth: true
