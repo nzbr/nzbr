@@ -1,4 +1,4 @@
-name: Update-Metrics 📊
+name: Update Metrics 📊
 on:
   schedule: 
     - cron: "0 * * * *"
@@ -10,14 +10,15 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.32
+        name: Update Metrics 📊
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
 
           user: nzbr
           template: classic
-          base: header, activity, community, repositories, metadata
+          base: header, activity, community, repositories #, metadata
           base_indepth: true
           config_animations: true
           config_timezone: Europe/Berlin
