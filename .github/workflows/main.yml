@@ -1,0 +1,27 @@
+name: Update-Metrics 📊
+on:
+  schedule: 
+    - cron: "0 * * * *"
+  push: 
+    branches:
+      - main
+  workflow_dispatch: {}
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+
+          user: nzbr
+          template: classic
+          base: header, activity, community, repositories, metadata
+          base_indepth: true
+          config_animations: true
+          config_timezone: Europe/Berlin
+          repositories_forks: true
+          use_prebuilt_image: true
+          optimize: css, xml
+          config_gemoji: true
