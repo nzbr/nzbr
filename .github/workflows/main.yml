@@ -41,7 +41,7 @@ jobs:
 
       - uses: ./.github/actions/s3-upload
         with:
-          secret-key: ${{ secrets.S3_CREDENTIALS }}
+          credentials: ${{ secrets.S3_CREDENTIALS }}
           file: header.svg
           key: header.svg
 
@@ -86,7 +86,7 @@ jobs:
 
       - uses: ./.github/actions/s3-upload
         with:
-          secret-key: ${{ secrets.S3_CREDENTIALS }}
+          credentials: ${{ secrets.S3_CREDENTIALS }}
           file: left.svg
           key: left.svg
 
@@ -141,7 +141,7 @@ jobs:
 
       - uses: ./.github/actions/s3-upload
         with:
-          secret-key: ${{ secrets.S3_CREDENTIALS }}
+          credentials: ${{ secrets.S3_CREDENTIALS }}
           file: right.svg
           key: right.svg
 
@@ -180,6 +180,6 @@ jobs:
 
       - uses: ./.github/actions/s3-upload
         with:
-          secret-key: ${{ secrets.S3_CREDENTIALS }}
+          credentials: ${{ secrets.S3_CREDENTIALS }}
           file: footer.svg
           key: footer.svg
