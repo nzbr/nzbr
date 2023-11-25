@@ -35,8 +35,7 @@ jobs:
           base: header
           base_indepth: true
 
-      - uses: lowlighter/metrics@latest
-        run: sudo mv /metrics_renders/* ./
+      - run: sudo mv /metrics_renders/* ./
 
       - uses: ./.github/actions/s3-upload
         with:
@@ -79,8 +78,7 @@ jobs:
           plugin_notable_repositories: true
           plugin_notable_types: commit
 
-      - uses: lowlighter/metrics@latest
-        run: sudo mv /metrics_renders/* ./
+      - run: sudo mv /metrics_renders/* ./
 
       - uses: ./.github/actions/s3-upload
         with:
@@ -133,8 +131,7 @@ jobs:
             nzbr/nixpkgs,
             nzbr/codimd
 
-      - uses: lowlighter/metrics@latest
-        run: sudo mv /metrics_renders/* ./
+      - run: sudo mv /metrics_renders/* ./
 
       - uses: ./.github/actions/s3-upload
         with:
@@ -171,8 +168,7 @@ jobs:
 
           base_indepth: true
 
-      - uses: lowlighter/metrics@latest
-        run: sudo mv /metrics_renders/* ./
+      - run: sudo mv /metrics_renders/* ./
 
       - uses: ./.github/actions/s3-upload
         with:
