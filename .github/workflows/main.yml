@@ -18,8 +18,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
 
           use_prebuilt_image: true
-          output_action: gist
-          committer_gist: a6fe28fcd123226209c328ecadc56757
+          output_action: none
           filename: header.svg
           config_output: svg
           output_condition: data-changed
@@ -36,6 +35,15 @@ jobs:
           base: header
           base_indepth: true
 
+      - uses: lowlighter/metrics@latest
+        run: sudo mv /metrics_renders/* ./
+
+      - uses: ./.github/actions/s3-upload
+        with:
+          secret-key: ${{ secrets.S3_CREDENTIALS }}
+          file: header.svg
+          key: header.svg
+
   left:
     name: Generate Left Column
     runs-on: ubuntu-latest
@@ -47,8 +55,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
 
           use_prebuilt_image: true
-          output_action: gist
-          committer_gist: a6fe28fcd123226209c328ecadc56757
+          output_action: none
           filename: left.svg
           config_output: svg
           output_condition: data-changed
@@ -72,6 +79,15 @@ jobs:
           plugin_notable_repositories: true
           plugin_notable_types: commit
 
+      - uses: lowlighter/metrics@latest
+        run: sudo mv /metrics_renders/* ./
+
+      - uses: ./.github/actions/s3-upload
+        with:
+          secret-key: ${{ secrets.S3_CREDENTIALS }}
+          file: left.svg
+          key: left.svg
+
   right:
     name: Generate Right Column
     runs-on: ubuntu-latest
@@ -83,8 +99,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
 
           use_prebuilt_image: true
-          output_action: gist
-          committer_gist: a6fe28fcd123226209c328ecadc56757
+          output_action: none
           filename: right.svg
           config_output: svg
           output_condition: data-changed
@@ -118,6 +133,15 @@ jobs:
             nzbr/nixpkgs,
             nzbr/codimd
 
+      - uses: lowlighter/metrics@latest
+        run: sudo mv /metrics_renders/* ./
+
+      - uses: ./.github/actions/s3-upload
+        with:
+          secret-key: ${{ secrets.S3_CREDENTIALS }}
+          file: right.svg
+          key: right.svg
+
   footer:
     name: Generate Footer
     runs-on: ubuntu-latest
@@ -129,8 +153,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
 
           use_prebuilt_image: true
-          output_action: gist
-          committer_gist: a6fe28fcd123226209c328ecadc56757
+          output_action: none
           filename: footer.svg
           config_output: svg
           output_condition: data-changed
@@ -145,4 +168,14 @@ jobs:
           config_gemoji: true
 
           base: metadata
+
           base_indepth: true
+
+      - uses: lowlighter/metrics@latest
+        run: sudo mv /metrics_renders/* ./
+
+      - uses: ./.github/actions/s3-upload
+        with:
+          secret-key: ${{ secrets.S3_CREDENTIALS }}
+          file: footer.svg
+          key: footer.svg

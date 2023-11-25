@@ -1,0 +1,29 @@
+inputs:
+  credentials:
+    description: AWS credentials
+    required: true
+  file:
+    description: The file to upload
+    required: true
+  key:
+    description: The key to store the file under
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - shell: pwsh
+      run: |
+        mkdir $HOME/.aws
+        @'
+        ${{ inputs.credentials }}
+        '@ > $HOME/.aws/credentials
+        Install-Module -Name AWSPowerShell -Force -SkipPublisherCheck
+        Import-Module AWSPowerShell -ErrorAction Stop
+
+        $s3_profile = 'github-metrics'
+        $endpoint = 'https://s3.eu-central-1.wasabisys.com'
+        $region = 'eu-central-1'
+        $bucket = 'nzbr-github-metrics'
+
+        Write-S3Object -BucketName $bucket -Region $region -ProfileName $s3_profile -EndpointUrl $endpoint -Key "${{ inputs.key }}" -File "${{ inputs.file }}"
