@@ -18,7 +18,7 @@ runs:
         @'
         ${{ inputs.credentials }}
         '@ > $HOME/.aws/credentials
-        Install-Module -Name AWSPowerShell -Force -SkipPublisherCheck
+        Install-Module -Name AWSPowerShell -Force -SkipPublisherCheck -RequiredVersion 4.1.476
         Import-Module AWSPowerShell -ErrorAction Stop
 
         $s3_profile = 'github-metrics'
