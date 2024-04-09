@@ -78,7 +78,7 @@ jobs:
 
           plugin_gists: true
 
-          plugin_notable: true
+          plugin_notable: false
           plugin_notable_repositories: true
           plugin_notable_types: commit
 
