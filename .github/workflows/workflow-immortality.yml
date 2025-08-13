@@ -21,3 +21,4 @@ jobs:
             ${{ github.repository }}
             nzbr/actions
             nzbr/ublue
+            nzbr/scoop-bucket
