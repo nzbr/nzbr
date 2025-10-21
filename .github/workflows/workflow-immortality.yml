@@ -20,5 +20,6 @@ jobs:
           repos: |
             ${{ github.repository }}
             nzbr/actions
+            nzbr/copperflame
             nzbr/ublue
             nzbr/scoop-bucket
