@@ -20,7 +20,7 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
-          use_prebuilt_image: true
+          use_prebuilt_image: false
           output_action: none
           filename: header.svg
           config_output: svg
@@ -59,7 +59,7 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
-          use_prebuilt_image: true
+          use_prebuilt_image: false
           output_action: none
           filename: left.svg
           config_output: svg
@@ -105,7 +105,7 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
-          use_prebuilt_image: true
+          use_prebuilt_image: false
           output_action: none
           filename: right.svg
           config_output: svg
@@ -161,7 +161,7 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
-          use_prebuilt_image: true
+          use_prebuilt_image: false
           output_action: none
           filename: footer.svg
           config_output: svg
