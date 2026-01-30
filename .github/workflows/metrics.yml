@@ -112,7 +112,7 @@ jobs:
           template: classic
           optimize: css, xml
 
-          repositories_forks: true
+          repositories_forks: false
           config_timezone: Europe/Berlin
           config_animations: true
           config_gemoji: true
