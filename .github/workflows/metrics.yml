@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
 
       # - uses: lowlighter/metrics@v3.34
-      - uses: lowlighter/metrics@c32878ca41906dba3e10fc9f19b2b12bc4298cd8
+      - uses: lowlighter/metrics@6395be479ad26602c82212685fd048d23d12afff
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
@@ -55,7 +55,7 @@ jobs:
       - uses: actions/checkout@v4
 
       # - uses: lowlighter/metrics@v3.34
-      - uses: lowlighter/metrics@c32878ca41906dba3e10fc9f19b2b12bc4298cd8
+      - uses: lowlighter/metrics@6395be479ad26602c82212685fd048d23d12afff
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
@@ -101,7 +101,7 @@ jobs:
       - uses: actions/checkout@v4
 
       # - uses: lowlighter/metrics@v3.34
-      - uses: lowlighter/metrics@c32878ca41906dba3e10fc9f19b2b12bc4298cd8
+      - uses: lowlighter/metrics@6395be479ad26602c82212685fd048d23d12afff
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
@@ -157,7 +157,7 @@ jobs:
       - uses: actions/checkout@v4
 
       # - uses: lowlighter/metrics@v3.34
-      - uses: lowlighter/metrics@c32878ca41906dba3e10fc9f19b2b12bc4298cd8
+      - uses: lowlighter/metrics@6395be479ad26602c82212685fd048d23d12afff
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
