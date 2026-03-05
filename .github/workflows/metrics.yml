@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
 
       # - uses: lowlighter/metrics@v3.34
-      - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
+      - uses: supairish/metrics@aaff865007fad0bc2d5e4e93eba3b4ceea19fb55
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
@@ -55,7 +55,7 @@ jobs:
       - uses: actions/checkout@v4
 
       # - uses: lowlighter/metrics@v3.34
-      - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
+      - uses: supairish/metrics@aaff865007fad0bc2d5e4e93eba3b4ceea19fb55
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
@@ -101,7 +101,7 @@ jobs:
       - uses: actions/checkout@v4
 
       # - uses: lowlighter/metrics@v3.34
-      - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
+      - uses: supairish/metrics@aaff865007fad0bc2d5e4e93eba3b4ceea19fb55
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
@@ -157,7 +157,7 @@ jobs:
       - uses: actions/checkout@v4
 
       # - uses: lowlighter/metrics@v3.34
-      - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
+      - uses: supairish/metrics@aaff865007fad0bc2d5e4e93eba3b4ceea19fb55
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
