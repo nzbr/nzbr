@@ -16,11 +16,12 @@ jobs:
       - uses: actions/checkout@v4
 
       # - uses: lowlighter/metrics@v3.34
-      - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
+      # - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
+      - uses: EUR-UN/metrics-community@ed4c3ca6bbd7fafaa2e644c88ae141b67edfd00c
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
-          use_prebuilt_image: false
+          use_prebuilt_image: true
           output_action: none
           filename: header.svg
           config_output: svg
@@ -55,11 +56,12 @@ jobs:
       - uses: actions/checkout@v4
 
       # - uses: lowlighter/metrics@v3.34
-      - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
+      # - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
+      - uses: EUR-UN/metrics-community@ed4c3ca6bbd7fafaa2e644c88ae141b67edfd00c
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
-          use_prebuilt_image: false
+          use_prebuilt_image: true
           output_action: none
           filename: left.svg
           config_output: svg
@@ -101,11 +103,12 @@ jobs:
       - uses: actions/checkout@v4
 
       # - uses: lowlighter/metrics@v3.34
-      - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
+      # - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
+      - uses: EUR-UN/metrics-community@ed4c3ca6bbd7fafaa2e644c88ae141b67edfd00c
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
-          use_prebuilt_image: false
+          use_prebuilt_image: true
           output_action: none
           filename: right.svg
           config_output: svg
@@ -157,11 +160,12 @@ jobs:
       - uses: actions/checkout@v4
 
       # - uses: lowlighter/metrics@v3.34
-      - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
+      # - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
+      - uses: EUR-UN/metrics-community@ed4c3ca6bbd7fafaa2e644c88ae141b67edfd00c
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
-          use_prebuilt_image: false
+          use_prebuilt_image: true
           output_action: none
           filename: footer.svg
           config_output: svg
