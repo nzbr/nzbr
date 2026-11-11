@@ -13,7 +13,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # - uses: lowlighter/metrics@v3.34
       # - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
@@ -53,7 +53,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # - uses: lowlighter/metrics@v3.34
       # - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
@@ -100,7 +100,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # - uses: lowlighter/metrics@v3.34
       # - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
@@ -157,7 +157,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # - uses: lowlighter/metrics@v3.34
       # - uses: supairish/metrics@831d2f7da3166a6c71eaae9a1f81770dd2d29cbd
